@@ -29,46 +29,46 @@ export class HourlyCard implements OnInit{
 
   //Vague description of what the weather is
   //Used for alt in images
-  weatherCodes: any = {
-    0: "Sunny",
+  weatherCodes: Record<number, string> = {
+    0: "Clear sky",
 
-    1: "Cloudy",
-    2: "Cloudy",
-    3: "Cloudy",
+    1: "Mainly clear",
+    2: "Partly cloudy",
+    3: "Overcast",
 
-    45: "Foggy",
-    48: "Foggy",
+    45: "Fog",
+    48: "Rime fog",
 
-    51: "Rainy",
-    53: "Rainy",
-    55: "Rainy",
+    51: "Light drizzle",
+    53: "Moderate drizzle",
+    55: "Heavy drizzle",
 
-    56: "Rainy",
-    57: "Rainy",
+    56: "Light freezing drizzle",
+    57: "Heavy freezing drizzle",
 
-    61: "Rainy",
-    63: "Rainy",
-    65: "Rainy",
+    61: "Light rain",
+    63: "Moderate rain",
+    65: "Heavy rain",
 
-    66: "Rainy",
-    67: "Rainy",
+    66: "Light freezing rain",
+    67: "Heavy freezing rain",
 
-    71: "Snow",
-    73: "Snow",
-    75: "Snow",
+    71: "Light snowfall",
+    73: "Moderate snowfall",
+    75: "Heavy snowfall",
 
-    77: "Snow",
+    77: "Snow grains",
 
-    80: "Rainy",
-    81: "Rainy",
-    82: "Rainy",
+    80: "Light rain showers",
+    81: "Moderate rain showers",
+    82: "Heavy rain showers",
 
-    85: "Snow",
-    86: "Snow",
+    85: "Light snow showers",
+    86: "Heavy snow showers",
 
-    95: "Storm",
-    96: "Storm",
-    99: "Storm"
+    95: "Thunderstorm",
+    96: "Thunderstorm with light hail",
+    99: "Thunderstorm with heavy hail"
   };
   
   weatherImg: any = {
