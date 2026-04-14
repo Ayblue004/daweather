@@ -18,12 +18,12 @@ export class App implements OnInit{
   protected readonly title = signal('daweather');
 
   // PROD ENDPOINTS
-  // ipEndpoint = 'https://daweather.meeyida.com/ip.php';
-  // cityEndpoint = 'https://daweather.meeyida.com/city.php';
+  ipEndpoint = 'https://daweather.meeyida.com/ip.php';
+  cityEndpoint = 'https://daweather.meeyida.com/city.php';
 
   //DEVELOPMENT ENDPOINTS
-  ipEndpoint = '/ip-api';
-  cityEndpoint = '/city-api';
+  // ipEndpoint = '/ip-api';
+  // cityEndpoint = '/city-api';
 
   userDetails: any;
   userIp: string = '';
