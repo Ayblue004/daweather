@@ -1,0 +1,56 @@
+.container{
+    width: 100%;
+    height: max-content;
+    height: 100%;
+    border-radius: 20px;
+    background-color: var(--sec-color);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    h3{
+        color: #ffffff;
+        opacity: 0.5;
+    }
+    .hourly-forecast{
+        height: 90%;
+        display: flex;
+        align-items: center;
+        overflow-y: scroll;
+        .hour-stat{
+            display: flex;
+            flex-direction: column;
+            width: 15%;
+            align-items: center;
+            .time{
+                font-size: 1rem;
+                color: #ffffff;
+            }
+            .weather-img{
+                width: 7rem;
+            }
+            .temperature{
+                font-size: 2rem;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+   .container{
+    .hourly-forecast{
+        .hour-stat{
+            width: 30%;
+            margin-left: 0.4rem;
+            .time{
+                width: max-content;
+            }
+            .temperature{
+                font-size: 1.2rem;
+            }
+            .weather-img{
+                width: 4rem;
+            }
+        }
+    }
+   } 
+}

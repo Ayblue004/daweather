@@ -1,0 +1,18 @@
+@if(hourlyData){
+    <div class="container">
+        <h3>Hourly Forecast</h3>
+        <div class="hourly-forecast">
+            @for(forecast of hourlyData['time']; track forecast; let i = $index){
+                <div class="hour-stat">
+                    <span class="time">{{hourlyData['time'][i] | date:'shortTime'}}</span>
+                    @if(isDay(hourlyData['time'][i])){
+                        <img class="weather-img" [src]="weatherImg[hourlyData['weather_code'][i]]" [alt]="weatherCodes[hourlyData['weather_code'][i]]">
+                    }@else {
+                        <img class="weather-img" [src]="weatherImgNight[hourlyData['weather_code'][i]]" [alt]="weatherCodes[hourlyData['weather_code'][i]]">
+                    }
+                    <span class="temperature">{{hourlyData['temperature_2m'][i] | number: '1.0-0'}}°</span>
+                </div>
+            }
+        </div>
+    </div>
+}

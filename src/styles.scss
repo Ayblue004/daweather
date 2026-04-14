@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Questrial", sans-serif;
+}
+
+:root{
+    // --main-color: #0C1C36;
+    --main-color: #59a0ee;
+    // --sec-color:#202B3C;
+    --sec-color:#285d95;
+    --primary-color:#ffffff;
+    --border-color: #707070;
+}

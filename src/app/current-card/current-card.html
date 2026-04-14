@@ -1,0 +1,26 @@
+@if(weatherData){
+    <div class="container">
+        <div class="col1">
+            <div class="row1">
+                <h1 class="large-text">
+                    {{userCity}}
+                </h1>
+                <span class="small-text">Feels like {{weatherData['current']['temperature_2m'] | number: '1.0-0'}}°</span>
+            </div>
+            <div class="row2">
+                <span>{{weatherData['current']['wind_speed_10m'] | number: '1.0-0'}}°</span>
+                <div class="wind-flex">
+                    <img src="/icons/wind.png" alt="wind speed">
+                    <span>{{weatherData['current']['wind_speed_10m'] | number: '1.0-0'}}km/h</span>
+                </div>
+            </div>
+        </div>
+        <div class="col2">
+            @if(weatherData['current']['is_day'] === 1){
+                <img class="weather-img" [src]="weatherImg[weatherData['current']['weather_code']]" [alt]="weatherCodes[weatherData['current']['weather_code']]">
+            }@else {
+                <img class="weather-img" [src]="weatherImgNight[weatherData['current']['weather_code']]" [alt]="weatherCodes[weatherData['current']['weather_code']]">
+            }
+        </div>
+    </div>
+}

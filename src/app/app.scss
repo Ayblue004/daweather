@@ -1,0 +1,57 @@
+.container{
+    height: 100vh;
+    min-height: 100vh;
+    background-color: var(--main-color);
+    padding: 2rem;
+    .content-contain{
+        display: flex;
+        max-width: 1136px;
+        max-height: 800px;
+        height: 100%;
+        gap: 1rem;
+        margin: auto;
+        .col1{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            .col1--row1{
+                width: 100%;
+                height: 40%;
+            }
+            .col1--row2{
+                width: 100%;
+                height: 60%;
+                display: flex;
+                align-items: flex-end;
+                app-hourly-card{
+                    width: 100%;
+                    height: 70%;
+                }
+            }
+        }
+        .col2{
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        padding: 1.5rem;
+        overflow: scroll;
+        .content-contain{
+            flex-direction: column;
+            max-width: 100%;
+            max-height: unset;
+            .col1{
+                width: 100%;
+                .col1--row2{
+                    align-items: center;
+                }
+            }
+            .col2{
+                width: 100%;
+            }
+        }
+    }
+}

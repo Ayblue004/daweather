@@ -1,0 +1,21 @@
+@if(weatherData){
+    <div class="container">
+        <h3>Daily Forecast</h3>
+        <div class="daily-forecast">
+            @for(day of weatherData['daily']['time']; track day; let i = $index){
+                <div class="daily-stat">
+                    <span class="day">{{weatherData['daily']['time'][i] | date:'EEE' }}</span>
+                    <div class="weather-code">
+                        <img class="weather-code-img" [src]="weatherImg[weatherData['daily']['weather_code'][i]]" [alt]="weatherCodes[weatherData['daily']['weather_code'][i]]">
+                        <span>{{weatherCodes[weatherData['daily']['weather_code'][i]]}}</span>
+                    </div>
+                    <div class="temp-range">
+                        <span class="high">{{weatherData['daily']['temperature_2m_max'][i] | number: '1.0-0'}}</span>
+                        /
+                        <span class="low">{{weatherData['daily']['temperature_2m_min'][i] | number: '1.0-0'}}</span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

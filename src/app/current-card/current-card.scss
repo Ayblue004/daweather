@@ -1,0 +1,89 @@
+.container{
+    background: none;
+    height: max-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    .col1{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .row1{
+            .large-text{
+                font-size: 3.5rem;
+                font-weight: 400;
+                color: var(--primary-color);
+            }
+            .small-text{
+                font-size: 1.2rem;
+                color: var(--primary-color);
+            }
+        }
+        .row2{
+            display: flex;
+            align-items: center;
+            // height: 75%;
+            span{
+                font-size: 3rem;
+                color: var(--primary-color);
+                width: 30%;
+            }
+            .wind-flex{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 3rem;
+                    margin-right: 10px;
+                }
+                span{
+
+                }
+            }
+        }
+    }
+    .col2{
+        .weather-img{
+            width: 100%;
+            // transform: translateY(-20%);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        .col1{
+            .row1{
+                .large-text{
+                    font-size: 2.5rem;
+                    text-align: center;
+                }
+                .small-text{
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                }
+            }
+            .row2{
+                justify-content: center;
+                span{
+                    font-size: 2rem;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+                .wind-flex{
+                    display: none;
+                }
+            }
+        }
+        .col2{
+            display: flex;
+            justify-content: center;
+            transform: translateY(-4rem);
+            .weather-img{
+                width: 20rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+
+{
+  "/ip-api": {
+    "target": "https://daweather.meeyida.com/ip.php",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/city-api":{
+    "target": "https://daweather.meeyida.com/city.php",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

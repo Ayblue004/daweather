@@ -1,0 +1,17 @@
+@if(weatherData){
+  <div class="container">
+    <div class="content-contain">
+      <div class="col1">
+        <div class="col1--row1">
+          <app-current-card [weatherData]="weatherData" [ipEndpoint]="ipEndpoint" [cityEndpoint]="cityEndpoint"></app-current-card>
+        </div>
+        <div class="col1--row2">
+          <app-hourly-card [hourlyData]="hourlyData"></app-hourly-card>
+        </div>
+      </div>
+      <div class="col2">
+        <app-daily-card [weatherData]="weatherData"></app-daily-card>
+      </div>
+    </div>
+  </div>
+}
