@@ -21,21 +21,21 @@
             .day{
                 color: var(--primary-color);
                 font-size: 1.2rem;
-                width: 30%;
+                width: 20%;
             }
             .weather-code{
                 display: flex;
                 align-items: center;
-                width: 30%;
+                width: 50%;
                 span{
                     color: var(--primary-color);
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                 }
             }
             .temp-range{
                 color: var(--primary-color);
                 font-size: 1rem;
-                width: 30%;
+                width: 20%;
                 display: flex;
                 justify-content: flex-end;
                 .low{
